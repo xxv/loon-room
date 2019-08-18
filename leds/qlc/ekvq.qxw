@@ -10,15 +10,11 @@
   <InputOutputMap>
    <Universe Name="Universe 1" ID="0">
     <Input Plugin="HID" Line="0"/>
-    <Output Plugin="DMX USB" Line="0">
-     <PluginParameters UniverseChannels="24"/>
-    </Output>
+    <Output Plugin="DMX USB" Line="0"/>
    </Universe>
    <Universe Name="MIDI universe" ID="1">
     <Input Plugin="MIDI" Line="0" Profile="Generic MIDI"/>
-    <Output Plugin="MIDI" Line="1">
-     <PluginParameters UniverseChannels="61" mode="Note Velocity"/>
-    </Output>
+    <Output Plugin="MIDI" Line="6"/>
    </Universe>
    <Universe Name="Universe 3" ID="2"/>
    <Universe Name="Universe 4" ID="3"/>
@@ -38,9 +34,29 @@
    <Model>Generic</Model>
    <Mode>1 Channel</Mode>
    <ID>1</ID>
-   <Name>miditest</Name>
+   <Name>MIDI Note 61</Name>
+   <Universe>1</Universe>
+   <Address>61</Address>
+   <Channels>1</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic</Model>
+   <Mode>1 Channel</Mode>
+   <ID>2</ID>
+   <Name>MIDI Note 60</Name>
    <Universe>1</Universe>
    <Address>60</Address>
+   <Channels>1</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic</Model>
+   <Mode>1 Channel</Mode>
+   <ID>3</ID>
+   <Name>MIDI Note 62</Name>
+   <Universe>1</Universe>
+   <Address>62</Address>
    <Channels>1</Channels>
   </Fixture>
   <Fixture>
@@ -113,22 +129,24 @@
    <Address>21</Address>
    <Channels>3</Channels>
   </Fixture>
-  <Function ID="0" Type="Scene" Name="Champagne 1">
+  <Function ID="0" Type="Scene" Name="New Scene" Hidden="True">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,153,1,255,2,0</FixtureVal>
-   <FixtureVal ID="7">0,153,1,255,2,0</FixtureVal>
+   <FixtureVal ID="0">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="7">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="8">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="9">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="10">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
   </Function>
-  <Function ID="1" Type="Chaser" Name="Champagne">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="1" Type="Sequence" Name="Clouds" BoundScene="0">
+   <Speed FadeIn="0" FadeOut="0" Duration="5000"/>
    <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
-   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
-   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">2</Step>
-  </Function>
-  <Function ID="2" Type="Scene" Name="Champagne - 1">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,123,1,202,2,0</FixtureVal>
-   <FixtureVal ID="7">0,153,1,255,2,0</FixtureVal>
+   <RunOrder>Random</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="5000" Hold="0" FadeOut="5000" Values="24">0:0,255,1,255,2,255:7:0,189,1,188,2,221:8:0,43,1,44,2,255:9:0,255,1,255,2,255:10:0,182,1,187,2,255:11:0,55,1,50,2,255</Step>
+   <Step Number="1" FadeIn="5000" Hold="0" FadeOut="5000" Values="24">0:0,152,1,144,2,181:7:0,139,1,134,2,201:8:0,43,1,44,2,255:9:0,187,1,182,2,206:10:0,145,1,141,2,213:11:0,55,1,50,2,255</Step>
   </Function>
   <Function ID="3" Type="Chaser" Name="Fire loop">
    <Speed FadeIn="100" FadeOut="100" Duration="20000"/>
@@ -137,13 +155,16 @@
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
    <Step Number="0" FadeIn="0" Hold="5000" FadeOut="0">17</Step>
   </Function>
-  <Function ID="4" Type="Scene" Name="Rising 1">
+  <Function ID="5" Type="Scene" Name="Sunrise - 4" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,255,1,255,2,106</FixtureVal>
-  </Function>
-  <Function ID="5" Type="Scene" Name="Rising 2">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="7">0,255,1,255,2,130</FixtureVal>
+   <FixtureVal ID="0">0,206,1,186,2,0</FixtureVal>
+   <FixtureVal ID="7">0,169,1,130,2,0</FixtureVal>
+   <FixtureVal ID="8">0,135,1,75,2,0</FixtureVal>
+   <FixtureVal ID="9">0,200,1,186,2,0</FixtureVal>
+   <FixtureVal ID="10">0,171,1,135,2,0</FixtureVal>
+   <FixtureVal ID="11">0,133,1,80,2,0</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
   </Function>
   <Function ID="6" Type="Scene" Name="solid - blue">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -178,47 +199,62 @@
    <FixtureVal ID="12">0,255,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,255,1,0,2,0</FixtureVal>
   </Function>
-  <Function ID="9" Type="Scene" Name="Blood 1" Path="Bloodflow">
+  <Function ID="9" Type="Scene" Name="Blood 1">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="0">0,161,1,0,2,0</FixtureVal>
    <FixtureVal ID="7">0,255,1,0,2,0</FixtureVal>
-   <FixtureVal ID="1">0,255</FixtureVal>
    <FixtureVal ID="8">0,208,1,0,2,0</FixtureVal>
    <FixtureVal ID="9">0,161,1,0,2,0</FixtureVal>
    <FixtureVal ID="10">0,255,1,0,2,0</FixtureVal>
    <FixtureVal ID="11">0,208,1,0,2,0</FixtureVal>
+   <FixtureVal ID="1">0,255</FixtureVal>
   </Function>
   <Function ID="10" Type="Scene" Name="Under Water 1" Path="Under water">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,1,67,2,107</FixtureVal>
-   <FixtureVal ID="7">0,0,1,67,2,107</FixtureVal>
-   <FixtureVal ID="8">0,0,1,67,2,107</FixtureVal>
+   <FixtureVal ID="0">0,0,1,13,2,21</FixtureVal>
+   <FixtureVal ID="7">0,0,1,92,2,148</FixtureVal>
+   <FixtureVal ID="8">0,0,1,123,2,197</FixtureVal>
+   <FixtureVal ID="9">0,0,1,67,2,107</FixtureVal>
+   <FixtureVal ID="10">0,0,1,92,2,148</FixtureVal>
+   <FixtureVal ID="11">0,1,1,160,2,255</FixtureVal>
+   <FixtureVal ID="2">0,255</FixtureVal>
   </Function>
   <Function ID="11" Type="Scene" Name="Under Water 2" Path="Under water">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,1,168,2,168</FixtureVal>
-   <FixtureVal ID="7">0,0,1,168,2,168</FixtureVal>
-   <FixtureVal ID="8">0,0,1,168,2,168</FixtureVal>
+   <FixtureVal ID="0">0,0,1,75,2,75</FixtureVal>
+   <FixtureVal ID="7">0,0,1,111,2,111</FixtureVal>
+   <FixtureVal ID="8">0,0,1,227,2,227</FixtureVal>
+   <FixtureVal ID="9">0,0,1,17,2,17</FixtureVal>
+   <FixtureVal ID="10">0,0,1,111,2,111</FixtureVal>
+   <FixtureVal ID="11">0,0,1,168,2,168</FixtureVal>
+   <FixtureVal ID="2">0,255</FixtureVal>
   </Function>
   <Function ID="12" Type="Scene" Name="Under Water 3" Path="Under water">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,1,139,2,193</FixtureVal>
+   <FixtureVal ID="0">0,0,1,45,2,63</FixtureVal>
    <FixtureVal ID="7">0,0,1,139,2,193</FixtureVal>
    <FixtureVal ID="8">0,0,1,139,2,193</FixtureVal>
+   <FixtureVal ID="2">0,255</FixtureVal>
+   <FixtureVal ID="9">0,0,1,45,2,63</FixtureVal>
+   <FixtureVal ID="10">0,0,1,139,2,193</FixtureVal>
+   <FixtureVal ID="11">0,0,1,184,2,255</FixtureVal>
   </Function>
   <Function ID="13" Type="Chaser" Name="under water">
-   <Speed FadeIn="1000" FadeOut="1" Duration="1200"/>
+   <Speed FadeIn="1000" FadeOut="1" Duration="500"/>
    <Direction>Forward</Direction>
    <RunOrder>Random</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
-   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">10</Step>
-   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">11</Step>
-   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">12</Step>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="500" Hold="0" FadeOut="500">10</Step>
+   <Step Number="1" FadeIn="5000" Hold="0" FadeOut="5000">10</Step>
+   <Step Number="2" FadeIn="500" Hold="0" FadeOut="500">11</Step>
+   <Step Number="3" FadeIn="5000" Hold="0" FadeOut="5000">12</Step>
+   <Step Number="4" FadeIn="5000" Hold="0" FadeOut="5000">11</Step>
+   <Step Number="5" FadeIn="500" Hold="0" FadeOut="500">12</Step>
   </Function>
   <Function ID="14" Type="Scene" Name="fire 1" Path="fire">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,1,255,2,0</FixtureVal>
-   <FixtureVal ID="7">0,0,1,255,2,0</FixtureVal>
+   <FixtureVal ID="0">0,255,1,0,2,0</FixtureVal>
+   <FixtureVal ID="7">0,255,1,0,2,0</FixtureVal>
   </Function>
   <Function ID="15" Type="Scene" Name="fire 2" Path="fire">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -227,7 +263,7 @@
   </Function>
   <Function ID="16" Type="Scene" Name="fire 3" Path="fire">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,1,204,2,0</FixtureVal>
+   <FixtureVal ID="0">0,204,1,204,2,0</FixtureVal>
    <FixtureVal ID="7">0,0,1,204,2,0</FixtureVal>
   </Function>
   <Function ID="17" Type="Chaser" Name="fire">
@@ -269,7 +305,7 @@
    <FixtureVal ID="0">0,41,1,0,2,0</FixtureVal>
    <FixtureVal ID="7">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="8">0,0,1,0,2,0</FixtureVal>
-   <FixtureVal ID="9">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="9">0,41,1,0,2,0</FixtureVal>
    <FixtureVal ID="10">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
@@ -282,13 +318,16 @@
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
    <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">19</Step>
   </Function>
-  <Function ID="23" Type="Chaser" Name="Rising Test">
-   <Speed FadeIn="200" FadeOut="200" Duration="300"/>
-   <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
-   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">4</Step>
-   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">5</Step>
+  <Function ID="23" Type="Scene" Name="Sunrise - 5" Path="Sunrise">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,232,1,225,2,0</FixtureVal>
+   <FixtureVal ID="7">0,198,1,167,2,0</FixtureVal>
+   <FixtureVal ID="8">0,152,1,134,2,0</FixtureVal>
+   <FixtureVal ID="9">0,230,1,220,2,0</FixtureVal>
+   <FixtureVal ID="10">0,187,1,166,2,0</FixtureVal>
+   <FixtureVal ID="11">0,152,1,126,2,0</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
   </Function>
   <Function ID="24" Type="Scene" Name="solid - white">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -338,14 +377,23 @@
    <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">21</Step>
    <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">29</Step>
    <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">30</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">5</Step>
+   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">23</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">36</Step>
+   <Step Number="6" FadeIn="0" Hold="0" FadeOut="0">37</Step>
+   <Step Number="7" FadeIn="0" Hold="0" FadeOut="0">38</Step>
+   <Step Number="8" FadeIn="0" Hold="0" FadeOut="0">39</Step>
+   <Step Number="9" FadeIn="0" Hold="0" FadeOut="0">40</Step>
+   <Step Number="10" FadeIn="0" Hold="0" FadeOut="0">41</Step>
+   <Step Number="11" FadeIn="0" Hold="0" FadeOut="0">42</Step>
   </Function>
   <Function ID="29" Type="Scene" Name="Sunrise 2" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="0">0,133,1,0,2,0</FixtureVal>
    <FixtureVal ID="7">0,61,1,0,2,0</FixtureVal>
    <FixtureVal ID="8">0,0,1,0,2,0</FixtureVal>
-   <FixtureVal ID="9">0,0,1,0,2,0</FixtureVal>
-   <FixtureVal ID="10">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="9">0,133,1,0,2,0</FixtureVal>
+   <FixtureVal ID="10">0,61,1,0,2,0</FixtureVal>
    <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
@@ -355,9 +403,9 @@
    <FixtureVal ID="0">0,206,1,96,2,0</FixtureVal>
    <FixtureVal ID="7">0,132,1,59,2,0</FixtureVal>
    <FixtureVal ID="8">0,65,1,16,2,0</FixtureVal>
-   <FixtureVal ID="9">0,0,1,0,2,0</FixtureVal>
-   <FixtureVal ID="10">0,0,1,0,2,0</FixtureVal>
-   <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="9">0,200,1,96,2,0</FixtureVal>
+   <FixtureVal ID="10">0,132,1,59,2,0</FixtureVal>
+   <FixtureVal ID="11">0,65,1,16,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
   </Function>
@@ -418,17 +466,117 @@
    <FixtureVal ID="12">0,255,1,0,2,255</FixtureVal>
    <FixtureVal ID="13">0,255,1,0,2,255</FixtureVal>
   </Function>
+  <Function ID="36" Type="Scene" Name="Sunrise - 6" Path="Sunrise">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="7">0,229,1,211,2,0</FixtureVal>
+   <FixtureVal ID="8">0,190,1,172,2,0</FixtureVal>
+   <FixtureVal ID="9">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="10">0,220,1,201,2,0</FixtureVal>
+   <FixtureVal ID="11">0,179,1,166,2,0</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+  </Function>
+  <Function ID="37" Type="Scene" Name="Sunrise - 7" Path="Sunrise">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255,1,255,2,130</FixtureVal>
+   <FixtureVal ID="7">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="8">0,233,1,220,2,0</FixtureVal>
+   <FixtureVal ID="9">0,255,1,255,2,120</FixtureVal>
+   <FixtureVal ID="10">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="11">0,229,1,208,2,0</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+  </Function>
+  <Function ID="38" Type="Scene" Name="Sunrise - 8" Path="Sunrise">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="7">0,255,1,255,2,136</FixtureVal>
+   <FixtureVal ID="8">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="9">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="10">0,255,1,255,2,135</FixtureVal>
+   <FixtureVal ID="11">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+  </Function>
+  <Function ID="39" Type="Scene" Name="Sunrise - 9" Path="Sunrise">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="7">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="8">0,255,1,255,2,158</FixtureVal>
+   <FixtureVal ID="9">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="10">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="11">0,255,1,255,2,144</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+  </Function>
+  <Function ID="40" Type="Scene" Name="Sunrise - 10" Path="Sunrise">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,199,1,196,2,255</FixtureVal>
+   <FixtureVal ID="7">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="8">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="9">0,175,1,174,2,255</FixtureVal>
+   <FixtureVal ID="10">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="11">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+  </Function>
+  <Function ID="41" Type="Scene" Name="Sunrise - 11" Path="Sunrise">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,90,1,94,2,255</FixtureVal>
+   <FixtureVal ID="7">0,168,1,165,2,255</FixtureVal>
+   <FixtureVal ID="8">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="9">0,108,1,111,2,255</FixtureVal>
+   <FixtureVal ID="10">0,131,1,145,2,255</FixtureVal>
+   <FixtureVal ID="11">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+  </Function>
+  <Function ID="42" Type="Scene" Name="Sunrise - 12" Path="Sunrise">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,1,0,2,90</FixtureVal>
+   <FixtureVal ID="7">0,62,1,61,2,151</FixtureVal>
+   <FixtureVal ID="8">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="9">0,0,1,0,2,82</FixtureVal>
+   <FixtureVal ID="10">0,50,1,53,2,140</FixtureVal>
+   <FixtureVal ID="11">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+  </Function>
+  <Function ID="43" Type="Scene" Name="New Scene" Hidden="True">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="7">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="8">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="9">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="10">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="3">0,0</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+  </Function>
+  <Function ID="44" Type="Sequence" Name="Champagne" BoundScene="43">
+   <Speed FadeIn="0" FadeOut="0" Duration="500"/>
+   <Direction>Forward</Direction>
+   <RunOrder>SingleShot</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0" Values="22"/>
+   <Step Number="1" FadeIn="0" Hold="66" FadeOut="0" Values="22">3:0,255</Step>
+   <Step Number="2" FadeIn="50" Hold="50" FadeOut="50" Values="22">3:0,255:8:0,227,1,227,2,232:11:0,224,1,228,2,228</Step>
+   <Step Number="3" FadeIn="0" Hold="1845" FadeOut="0" Values="22">3:0,255</Step>
+   <Step Number="4" FadeIn="5000" Hold="0" FadeOut="0" Values="22">0:0,176,1,129:3:0,255:7:0,176,1,129:8:0,176,1,129:9:0,176,1,129:10:0,176,1,129:11:0,176,1,129:12:0,176,1,129</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0" Values="22">0:0,176,1,129:7:0,176,1,129:8:0,176,1,129:9:0,176,1,129:10:0,176,1,129:11:0,176,1,129:12:0,176,1,129</Step>
+  </Function>
   <Monitor DisplayMode="1" ShowLabels="0">
    <Font>Arial,12,-1,5,50,0,0,0,0,0</Font>
    <ChannelStyle>0</ChannelStyle>
    <ValueStyle>1</ValueStyle>
    <Grid Width="2" Height="3" Depth="2" Units="0"/>
-   <FxItem ID="0" XPos="10.9342" YPos="1742.57"/>
-   <FxItem ID="7" XPos="-2.26169" YPos="866.154"/>
-   <FxItem ID="8" XPos="26.2278" YPos="-2.45156"/>
-   <FxItem ID="9" XPos="1703.58" YPos="1745.93"/>
-   <FxItem ID="10" XPos="1732.9" YPos="866.45"/>
-   <FxItem ID="11" XPos="1741.98" YPos="24.9148"/>
+   <FxItem ID="0" XPos="0" YPos="1743"/>
+   <FxItem ID="7" XPos="0" YPos="870"/>
+   <FxItem ID="8" XPos="0" YPos="0"/>
+   <FxItem ID="9" XPos="1742" YPos="1746"/>
+   <FxItem ID="10" XPos="1742" YPos="866"/>
+   <FxItem ID="11" XPos="1742" YPos="0"/>
   </Monitor>
  </Engine>
  <VirtualConsole>
@@ -441,7 +589,7 @@
     <Font>Default</Font>
    </Appearance>
    <Button Caption="Under Water" ID="0" Icon="">
-    <WindowState Visible="False" X="335" Y="175" Width="195" Height="85"/>
+    <WindowState Visible="False" X="190" Y="0" Width="180" Height="120"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -452,10 +600,10 @@
     <Function ID="13"/>
     <Action>Toggle</Action>
     <Intensity Adjust="False">100</Intensity>
-    <Input Universe="0" Channel="2"/>
+    <Input Universe="0" Channel="7"/>
    </Button>
    <Button Caption="fire" ID="2" Icon="">
-    <WindowState Visible="False" X="1030" Y="205" Width="195" Height="130"/>
+    <WindowState Visible="False" X="560" Y="0" Width="195" Height="130"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -466,24 +614,10 @@
     <Function ID="17"/>
     <Action>Toggle</Action>
     <Intensity Adjust="False">100</Intensity>
-    <Input Universe="0" Channel="5"/>
-   </Button>
-   <Button Caption="New Show 1" ID="3" Icon="">
-    <WindowState Visible="False" X="495" Y="435" Width="345" Height="265"/>
-    <Appearance>
-     <FrameStyle>None</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <Function ID="4294967295"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-    <Input Universe="0" Channel="11"/>
+    <Input Universe="0" Channel="9"/>
    </Button>
    <Button Caption="blood lights" ID="1" Icon="">
-    <WindowState Visible="False" X="35" Y="40" Width="190" Height="120"/>
+    <WindowState Visible="False" X="0" Y="0" Width="190" Height="120"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -497,7 +631,7 @@
     <Input Universe="0" Channel="6"/>
    </Button>
    <Button Caption="Champagne 1" ID="4" Icon="">
-    <WindowState Visible="False" X="135" Y="490" Width="220" Height="155"/>
+    <WindowState Visible="False" X="370" Y="0" Width="190" Height="130"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -505,12 +639,13 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <Function ID="0"/>
+    <Function ID="44"/>
     <Action>Toggle</Action>
     <Intensity Adjust="False">100</Intensity>
+    <Input Universe="0" Channel="8"/>
    </Button>
-   <Button Caption="Rising Test" ID="5" Icon="">
-    <WindowState Visible="False" X="155" Y="220" Width="50" Height="50"/>
+   <Button Caption="Sunrise" ID="3" Icon="">
+    <WindowState Visible="False" X="750" Y="0" Width="220" Height="130"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -518,10 +653,107 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <Function ID="23"/>
+    <Function ID="28"/>
     <Action>Toggle</Action>
     <Intensity Adjust="False">100</Intensity>
+    <Input Universe="0" Channel="10"/>
    </Button>
+   <Button Caption="Rainbow" ID="5" Icon="">
+    <WindowState Visible="False" X="970" Y="0" Width="185" Height="130"/>
+    <Appearance>
+     <FrameStyle>None</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <Function ID="31"/>
+    <Action>Toggle</Action>
+    <Intensity Adjust="False">100</Intensity>
+    <Input Universe="0" Channel="11"/>
+   </Button>
+   <SoloFrame Caption="" ID="6">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <WindowState Visible="False" X="345" Y="250" Width="515" Height="115"/>
+    <AllowChildren>False</AllowChildren>
+    <AllowResize>False</AllowResize>
+    <ShowHeader>False</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Mixing>False</Mixing>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Button Caption="bloodflow" ID="7" Icon="">
+     <WindowState Visible="False" X="10" Y="10" Width="95" Height="95"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Function ID="19"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+    </Button>
+    <Button Caption="fire" ID="8" Icon="">
+     <WindowState Visible="False" X="105" Y="10" Width="95" Height="95"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Function ID="17"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+    </Button>
+    <Button Caption="Rainbow" ID="9" Icon="">
+     <WindowState Visible="False" X="205" Y="10" Width="95" Height="95"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Function ID="31"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+    </Button>
+    <Button Caption="under water" ID="10" Icon="">
+     <WindowState Visible="False" X="305" Y="10" Width="95" Height="95"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Function ID="13"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+    </Button>
+    <Button Caption="Sunrise" ID="11" Icon="">
+     <WindowState Visible="False" X="405" Y="10" Width="95" Height="95"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Function ID="28"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+    </Button>
+   </SoloFrame>
   </Frame>
   <Properties>
    <Size Width="1920" Height="1080"/>
