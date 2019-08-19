@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Workspace>
-<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FunctionManager">
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VirtualConsole">
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>4.12.1</Version>
@@ -145,8 +145,10 @@
    <Direction>Forward</Direction>
    <RunOrder>Random</RunOrder>
    <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
-   <Step Number="0" FadeIn="5000" Hold="0" FadeOut="5000" Values="24">0:0,255,1,255,2,255:7:0,189,1,188,2,221:8:0,43,1,44,2,255:9:0,255,1,255,2,255:10:0,182,1,187,2,255:11:0,55,1,50,2,255</Step>
-   <Step Number="1" FadeIn="5000" Hold="0" FadeOut="5000" Values="24">0:0,152,1,144,2,181:7:0,139,1,134,2,201:8:0,43,1,44,2,255:9:0,187,1,182,2,206:10:0,145,1,141,2,213:11:0,55,1,50,2,255</Step>
+   <Step Number="0" FadeIn="6000" Hold="0" FadeOut="5000" Values="24">0:0,255,1,255,2,255:7:0,189,1,188,2,221:8:0,43,1,44,2,255:9:0,255,1,255,2,255:10:0,182,1,187,2,255:11:0,55,1,50,2,255</Step>
+   <Step Number="1" FadeIn="5000" Hold="0" FadeOut="8000" Values="24">0:0,93,1,70,2,110:7:0,177,1,156,2,215:8:0,43,1,44,2,255:9:0,187,1,182,2,206:10:0,127,1,114,2,213:11:0,55,1,50,2,255</Step>
+   <Step Number="2" FadeIn="9000" Hold="0" FadeOut="5000" Values="24">0:0,152,1,144,2,181:7:0,139,1,134,2,201:8:2,140:9:0,255,1,255,2,255:10:0,145,1,141,2,213:11:0,55,1,50,2,255</Step>
+   <Step Number="3" FadeIn="7000" Hold="0" FadeOut="10000" Values="24">0:0,181,1,184,2,211:7:0,108,1,118,2,179:8:0,43,1,44,2,255:9:0,191,1,201,2,255:10:0,162,1,168,2,225:11:0,55,1,50,2,178</Step>
   </Function>
   <Function ID="2" Type="Chaser" Name="Under water loop">
    <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
@@ -594,7 +596,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="False" X="345" Y="250" Width="515" Height="115"/>
+    <WindowState Visible="True" X="345" Y="250" Width="515" Height="115"/>
     <AllowChildren>False</AllowChildren>
     <AllowResize>False</AllowResize>
     <ShowHeader>False</ShowHeader>
@@ -603,7 +605,7 @@
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
     <Button Caption="bloodflow" ID="7" Icon="">
-     <WindowState Visible="False" X="10" Y="10" Width="95" Height="95"/>
+     <WindowState Visible="True" X="10" Y="10" Width="95" Height="95"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -617,7 +619,7 @@
      <Input Universe="0" Channel="8"/>
     </Button>
     <Button Caption="clouds" ID="8" Icon="">
-     <WindowState Visible="False" X="105" Y="10" Width="95" Height="95"/>
+     <WindowState Visible="True" X="105" Y="10" Width="95" Height="95"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -631,7 +633,7 @@
      <Input Universe="0" Channel="6"/>
     </Button>
     <Button Caption="Rainbow" ID="9" Icon="">
-     <WindowState Visible="False" X="205" Y="10" Width="95" Height="95"/>
+     <WindowState Visible="True" X="205" Y="10" Width="95" Height="95"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -645,7 +647,7 @@
      <Input Universe="0" Channel="7"/>
     </Button>
     <Button Caption="under water" ID="10" Icon="">
-     <WindowState Visible="False" X="305" Y="10" Width="95" Height="95"/>
+     <WindowState Visible="True" X="305" Y="10" Width="95" Height="95"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -659,7 +661,7 @@
      <Input Universe="0" Channel="10"/>
     </Button>
     <Button Caption="Sunrise" ID="11" Icon="">
-     <WindowState Visible="False" X="405" Y="10" Width="95" Height="95"/>
+     <WindowState Visible="True" X="405" Y="10" Width="95" Height="95"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
