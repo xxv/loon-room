@@ -14,7 +14,9 @@
    </Universe>
    <Universe Name="MIDI universe" ID="1">
     <Input Plugin="MIDI" Line="0" Profile="Generic MIDI"/>
-    <Output Plugin="MIDI" Line="6"/>
+    <Output Plugin="MIDI" Line="1">
+     <PluginParameters UniverseChannels="65"/>
+    </Output>
    </Universe>
    <Universe Name="Universe 3" ID="2"/>
    <Universe Name="Universe 4" ID="3"/>
@@ -34,7 +36,7 @@
    <Model>Generic</Model>
    <Mode>1 Channel</Mode>
    <ID>1</ID>
-   <Name>MIDI Note 61</Name>
+   <Name>Bloodflow (MIDI Note 61)</Name>
    <Universe>1</Universe>
    <Address>61</Address>
    <Channels>1</Channels>
@@ -44,7 +46,7 @@
    <Model>Generic</Model>
    <Mode>1 Channel</Mode>
    <ID>2</ID>
-   <Name>MIDI Note 60</Name>
+   <Name>Under water (MIDI Note 60)</Name>
    <Universe>1</Universe>
    <Address>60</Address>
    <Channels>1</Channels>
@@ -57,6 +59,26 @@
    <Name>MIDI Note 62</Name>
    <Universe>1</Universe>
    <Address>62</Address>
+   <Channels>1</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic</Model>
+   <Mode>1 Channel</Mode>
+   <ID>4</ID>
+   <Name>Sunrise (MIDI Note 63)</Name>
+   <Universe>1</Universe>
+   <Address>63</Address>
+   <Channels>1</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic</Model>
+   <Mode>1 Channel</Mode>
+   <ID>5</ID>
+   <Name>Clouds (MIDI Note 64)</Name>
+   <Universe>1</Universe>
+   <Address>64</Address>
    <Channels>1</Channels>
   </Fixture>
   <Fixture>
@@ -137,18 +159,17 @@
    <FixtureVal ID="9">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="10">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
-   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
-   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="5">0,0</FixtureVal>
   </Function>
   <Function ID="1" Type="Sequence" Name="Clouds" BoundScene="0">
    <Speed FadeIn="0" FadeOut="0" Duration="5000"/>
    <Direction>Forward</Direction>
    <RunOrder>Random</RunOrder>
    <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
-   <Step Number="0" FadeIn="6000" Hold="0" FadeOut="5000" Values="24">0:0,255,1,255,2,255:7:0,189,1,188,2,221:8:0,43,1,44,2,255:9:0,255,1,255,2,255:10:0,182,1,187,2,255:11:0,55,1,50,2,255</Step>
-   <Step Number="1" FadeIn="5000" Hold="0" FadeOut="8000" Values="24">0:0,93,1,70,2,110:7:0,177,1,156,2,215:8:0,43,1,44,2,255:9:0,187,1,182,2,206:10:0,127,1,114,2,213:11:0,55,1,50,2,255</Step>
-   <Step Number="2" FadeIn="9000" Hold="0" FadeOut="5000" Values="24">0:0,152,1,144,2,181:7:0,139,1,134,2,201:8:2,140:9:0,255,1,255,2,255:10:0,145,1,141,2,213:11:0,55,1,50,2,255</Step>
-   <Step Number="3" FadeIn="7000" Hold="0" FadeOut="10000" Values="24">0:0,181,1,184,2,211:7:0,108,1,118,2,179:8:0,43,1,44,2,255:9:0,191,1,201,2,255:10:0,162,1,168,2,225:11:0,55,1,50,2,178</Step>
+   <Step Number="0" FadeIn="6000" Hold="0" FadeOut="5000" Values="19">0:0,255,1,255,2,255:5:0,255:7:0,189,1,188,2,221:8:0,43,1,44,2,255:9:0,255,1,255,2,255:10:0,182,1,187,2,255:11:0,55,1,50,2,255</Step>
+   <Step Number="1" FadeIn="5000" Hold="0" FadeOut="8000" Values="19">0:0,93,1,70,2,110:5:0,255:7:0,177,1,156,2,215:8:0,43,1,44,2,255:9:0,187,1,182,2,206:10:0,127,1,114,2,213:11:0,55,1,50,2,255</Step>
+   <Step Number="2" FadeIn="9000" Hold="0" FadeOut="5000" Values="19">0:0,152,1,144,2,181:5:0,255:7:0,139,1,134,2,201:8:2,140:9:0,255,1,255,2,255:10:0,145,1,141,2,213:11:0,55,1,50,2,255</Step>
+   <Step Number="3" FadeIn="7000" Hold="0" FadeOut="10000" Values="19">0:0,181,1,184,2,211:5:0,255:7:0,108,1,118,2,179:8:0,43,1,44,2,255:9:0,191,1,201,2,255:10:0,162,1,168,2,225:11:0,55,1,50,2,178</Step>
   </Function>
   <Function ID="2" Type="Chaser" Name="Under water loop">
    <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
@@ -181,6 +202,7 @@
    <FixtureVal ID="11">0,133,1,80,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="6" Type="Scene" Name="solid - blue">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -295,6 +317,7 @@
    <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="23" Type="Scene" Name="Sunrise - 5" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -306,6 +329,7 @@
    <FixtureVal ID="11">0,152,1,126,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="24" Type="Scene" Name="solid - white">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -357,6 +381,7 @@
    <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="30" Type="Scene" Name="Sunrise -3" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -368,6 +393,7 @@
    <FixtureVal ID="11">0,65,1,16,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="31" Type="Chaser" Name="Rainbow">
    <Speed FadeIn="5000" FadeOut="5000" Duration="5000"/>
@@ -436,6 +462,7 @@
    <FixtureVal ID="11">0,179,1,166,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="37" Type="Scene" Name="Sunrise - 7" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -447,6 +474,7 @@
    <FixtureVal ID="11">0,229,1,208,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="38" Type="Scene" Name="Sunrise - 8" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -458,6 +486,7 @@
    <FixtureVal ID="11">0,255,1,255,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="39" Type="Scene" Name="Sunrise - 9" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -469,6 +498,7 @@
    <FixtureVal ID="11">0,255,1,255,2,144</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="40" Type="Scene" Name="Sunrise - 10" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -480,6 +510,7 @@
    <FixtureVal ID="11">0,255,1,255,2,255</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="41" Type="Scene" Name="Sunrise - 11" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -491,6 +522,7 @@
    <FixtureVal ID="11">0,255,1,255,2,255</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="42" Type="Scene" Name="Sunrise - 12" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -502,6 +534,7 @@
    <FixtureVal ID="11">0,255,1,255,2,255</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
   </Function>
   <Function ID="43" Type="Scene" Name="New Scene" Hidden="True">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
