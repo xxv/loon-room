@@ -148,12 +148,26 @@
    <Step Number="0" FadeIn="5000" Hold="0" FadeOut="5000" Values="24">0:0,255,1,255,2,255:7:0,189,1,188,2,221:8:0,43,1,44,2,255:9:0,255,1,255,2,255:10:0,182,1,187,2,255:11:0,55,1,50,2,255</Step>
    <Step Number="1" FadeIn="5000" Hold="0" FadeOut="5000" Values="24">0:0,152,1,144,2,181:7:0,139,1,134,2,201:8:0,43,1,44,2,255:9:0,187,1,182,2,206:10:0,145,1,141,2,213:11:0,55,1,50,2,255</Step>
   </Function>
+  <Function ID="2" Type="Chaser" Name="Under water loop">
+   <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">13</Step>
+  </Function>
   <Function ID="3" Type="Chaser" Name="Fire loop">
    <Speed FadeIn="100" FadeOut="100" Duration="20000"/>
    <Direction>Forward</Direction>
    <RunOrder>Random</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
    <Step Number="0" FadeIn="0" Hold="5000" FadeOut="0">17</Step>
+  </Function>
+  <Function ID="4" Type="Chaser" Name="Sunrise loop">
+   <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">28</Step>
   </Function>
   <Function ID="5" Type="Scene" Name="Sunrise - 4" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -198,16 +212,6 @@
    <FixtureVal ID="11">0,255,1,0,2,0</FixtureVal>
    <FixtureVal ID="12">0,255,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,255,1,0,2,0</FixtureVal>
-  </Function>
-  <Function ID="9" Type="Scene" Name="Blood 1">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,161,1,0,2,0</FixtureVal>
-   <FixtureVal ID="7">0,255,1,0,2,0</FixtureVal>
-   <FixtureVal ID="8">0,208,1,0,2,0</FixtureVal>
-   <FixtureVal ID="9">0,161,1,0,2,0</FixtureVal>
-   <FixtureVal ID="10">0,255,1,0,2,0</FixtureVal>
-   <FixtureVal ID="11">0,208,1,0,2,0</FixtureVal>
-   <FixtureVal ID="1">0,255</FixtureVal>
   </Function>
   <Function ID="10" Type="Scene" Name="Under Water 1" Path="Under water">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -275,30 +279,9 @@
    <Step Number="1" FadeIn="100" Hold="0" FadeOut="100">15</Step>
    <Step Number="2" FadeIn="500" Hold="0" FadeOut="500">16</Step>
   </Function>
-  <Function ID="18" Type="Scene" Name="Blood 3" Path="Bloodflow">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,255,1,0,2,0</FixtureVal>
-   <FixtureVal ID="7">0,208,1,0,2,0</FixtureVal>
-   <FixtureVal ID="1">0,255</FixtureVal>
-   <FixtureVal ID="8">0,161,1,0,2,0</FixtureVal>
-   <FixtureVal ID="9">0,255,1,0,2,0</FixtureVal>
-   <FixtureVal ID="10">0,208,1,0,2,0</FixtureVal>
-   <FixtureVal ID="11">0,161,1,0,2,0</FixtureVal>
-  </Function>
-  <Function ID="19" Type="Chaser" Name="bloodflow">
-   <Speed FadeIn="0" FadeOut="0" Duration="333"/>
-   <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
-   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="Common"/>
-   <Step Number="0" FadeIn="283" Hold="0" FadeOut="283">9</Step>
-   <Step Number="1" FadeIn="283" Hold="500" FadeOut="283">26</Step>
-   <Step Number="2" FadeIn="283" Hold="0" FadeOut="283">18</Step>
-  </Function>
   <Function ID="20" Type="Show" Name="New Show 20">
    <TimeDivision Type="Time" BPM="120"/>
-   <Track ID="0" Name="Track 1" isMute="0">
-    <ShowFunction ID="22" StartTime="0" Duration="10000" Color="#556b80"/>
-   </Track>
+   <Track ID="0" Name="Track 1" isMute="0"/>
   </Function>
   <Function ID="21" Type="Scene" Name="Sunrise 1" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -310,13 +293,6 @@
    <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
-  </Function>
-  <Function ID="22" Type="Chaser" Name="bloodflow 10s">
-   <Speed FadeIn="0" FadeOut="0" Duration="10000"/>
-   <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
-   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
-   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">19</Step>
   </Function>
   <Function ID="23" Type="Scene" Name="Sunrise - 5" Path="Sunrise">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -350,24 +326,6 @@
    <FixtureVal ID="11">0,255,1,134,2,21</FixtureVal>
    <FixtureVal ID="12">0,255,1,134,2,21</FixtureVal>
    <FixtureVal ID="13">0,255,1,134,2,21</FixtureVal>
-  </Function>
-  <Function ID="26" Type="Scene" Name="Blood 2" Path="Bloodflow">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,208,1,0,2,0</FixtureVal>
-   <FixtureVal ID="7">0,161,1,0,2,0</FixtureVal>
-   <FixtureVal ID="1">0,255</FixtureVal>
-   <FixtureVal ID="8">0,255,1,0,2,0</FixtureVal>
-   <FixtureVal ID="9">0,208,1,0,2,0</FixtureVal>
-   <FixtureVal ID="10">0,161,1,0,2,0</FixtureVal>
-   <FixtureVal ID="11">0,255,1,0,2,0</FixtureVal>
-  </Function>
-  <Function ID="27" Type="Chaser" Name="bloodflow (two step)">
-   <Speed FadeIn="0" FadeOut="0" Duration="500"/>
-   <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
-   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="Common"/>
-   <Step Number="0" FadeIn="450" Hold="0" FadeOut="450">9</Step>
-   <Step Number="1" FadeIn="450" Hold="0" FadeOut="450">18</Step>
   </Function>
   <Function ID="28" Type="Chaser" Name="Sunrise">
    <Speed FadeIn="10000" FadeOut="10000" Duration="10000"/>
@@ -566,6 +524,46 @@
    <Step Number="4" FadeIn="5000" Hold="0" FadeOut="0" Values="22">0:0,176,1,129:3:0,255:7:0,176,1,129:8:0,176,1,129:9:0,176,1,129:10:0,176,1,129:11:0,176,1,129:12:0,176,1,129</Step>
    <Step Number="5" FadeIn="0" Hold="0" FadeOut="0" Values="22">0:0,176,1,129:7:0,176,1,129:8:0,176,1,129:9:0,176,1,129:10:0,176,1,129:11:0,176,1,129:12:0,176,1,129</Step>
   </Function>
+  <Function ID="45" Type="Chaser" Name="Rainbow loop">
+   <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">31</Step>
+  </Function>
+  <Function ID="46" Type="Chaser" Name="Clouds loop">
+   <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">1</Step>
+  </Function>
+  <Function ID="47" Type="Scene" Name="New Scene" Hidden="True">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="7">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="8">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="9">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="10">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="1">0,0</FixtureVal>
+  </Function>
+  <Function ID="48" Type="Sequence" Name="Bloodflow" BoundScene="47">
+   <Speed FadeIn="283" FadeOut="283" Duration="333"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0" Values="19">0:0,100:1:0,255:7:0,255:8:0,160:9:0,100:10:0,255:11:0,160</Step>
+   <Step Number="1" FadeIn="283" Hold="50" FadeOut="283" Values="19">0:0,160:1:0,255:7:0,100:8:0,255:9:0,160:10:0,100:11:0,255</Step>
+   <Step Number="2" FadeIn="283" Hold="50" FadeOut="283" Values="19">0:0,255:1:0,255:7:0,160:8:0,100:9:0,255:10:0,160:11:0,100</Step>
+  </Function>
+  <Function ID="49" Type="Chaser" Name="bloodflow loop">
+   <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">48</Step>
+  </Function>
   <Monitor DisplayMode="1" ShowLabels="0">
    <Font>Arial,12,-1,5,50,0,0,0,0,0</Font>
    <ChannelStyle>0</ChannelStyle>
@@ -588,90 +586,6 @@
     <BackgroundImage>None</BackgroundImage>
     <Font>Default</Font>
    </Appearance>
-   <Button Caption="Under Water" ID="0" Icon="">
-    <WindowState Visible="False" X="190" Y="0" Width="180" Height="120"/>
-    <Appearance>
-     <FrameStyle>None</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <Function ID="13"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-    <Input Universe="0" Channel="7"/>
-   </Button>
-   <Button Caption="fire" ID="2" Icon="">
-    <WindowState Visible="False" X="560" Y="0" Width="195" Height="130"/>
-    <Appearance>
-     <FrameStyle>None</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <Function ID="17"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-    <Input Universe="0" Channel="9"/>
-   </Button>
-   <Button Caption="blood lights" ID="1" Icon="">
-    <WindowState Visible="False" X="0" Y="0" Width="190" Height="120"/>
-    <Appearance>
-     <FrameStyle>None</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <Function ID="22"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-    <Input Universe="0" Channel="6"/>
-   </Button>
-   <Button Caption="Champagne 1" ID="4" Icon="">
-    <WindowState Visible="False" X="370" Y="0" Width="190" Height="130"/>
-    <Appearance>
-     <FrameStyle>None</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <Function ID="44"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-    <Input Universe="0" Channel="8"/>
-   </Button>
-   <Button Caption="Sunrise" ID="3" Icon="">
-    <WindowState Visible="False" X="750" Y="0" Width="220" Height="130"/>
-    <Appearance>
-     <FrameStyle>None</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <Function ID="28"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-    <Input Universe="0" Channel="10"/>
-   </Button>
-   <Button Caption="Rainbow" ID="5" Icon="">
-    <WindowState Visible="False" X="970" Y="0" Width="185" Height="130"/>
-    <Appearance>
-     <FrameStyle>None</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <Function ID="31"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-    <Input Universe="0" Channel="11"/>
-   </Button>
    <SoloFrame Caption="" ID="6">
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
@@ -697,11 +611,12 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <Function ID="19"/>
+     <Function ID="49"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
+     <Input Universe="0" Channel="8"/>
     </Button>
-    <Button Caption="fire" ID="8" Icon="">
+    <Button Caption="clouds" ID="8" Icon="">
      <WindowState Visible="False" X="105" Y="10" Width="95" Height="95"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
@@ -710,9 +625,10 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <Function ID="17"/>
+     <Function ID="46"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
+     <Input Universe="0" Channel="6"/>
     </Button>
     <Button Caption="Rainbow" ID="9" Icon="">
      <WindowState Visible="False" X="205" Y="10" Width="95" Height="95"/>
@@ -723,9 +639,10 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <Function ID="31"/>
+     <Function ID="45"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
+     <Input Universe="0" Channel="7"/>
     </Button>
     <Button Caption="under water" ID="10" Icon="">
      <WindowState Visible="False" X="305" Y="10" Width="95" Height="95"/>
@@ -736,9 +653,10 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <Function ID="13"/>
+     <Function ID="2"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
+     <Input Universe="0" Channel="10"/>
     </Button>
     <Button Caption="Sunrise" ID="11" Icon="">
      <WindowState Visible="False" X="405" Y="10" Width="95" Height="95"/>
@@ -749,9 +667,10 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <Function ID="28"/>
+     <Function ID="4"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
+     <Input Universe="0" Channel="9"/>
     </Button>
    </SoloFrame>
   </Frame>
