@@ -598,7 +598,7 @@
    <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Default"/>
    <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">48</Step>
   </Function>
   <Monitor DisplayMode="1" ShowLabels="0">
