@@ -590,9 +590,9 @@
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
-   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0" Values="19">0:0,100:1:0,255:7:0,255:8:0,160:9:0,100:10:0,255:11:0,160</Step>
-   <Step Number="1" FadeIn="283" Hold="50" FadeOut="283" Values="19">0:0,160:1:0,255:7:0,100:8:0,255:9:0,160:10:0,100:11:0,255</Step>
-   <Step Number="2" FadeIn="283" Hold="50" FadeOut="283" Values="19">0:0,255:1:0,255:7:0,160:8:0,100:9:0,255:10:0,160:11:0,100</Step>
+   <Step Number="0" FadeIn="283" Hold="50" FadeOut="283" Values="19">0:0,5:1:0,255:7:0,255:8:0,100:9:0,5:10:0,255:11:0,100</Step>
+   <Step Number="1" FadeIn="283" Hold="50" FadeOut="283" Values="19">0:0,100:1:0,255:7:0,5:8:0,255:9:0,100:10:0,5:11:0,255</Step>
+   <Step Number="2" FadeIn="283" Hold="50" FadeOut="283" Values="19">0:0,255:1:0,255:7:0,100:8:0,5:9:0,255:10:0,100:11:0,5</Step>
   </Function>
   <Function ID="49" Type="Chaser" Name="bloodflow loop">
    <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
