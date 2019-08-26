@@ -249,6 +249,8 @@
    <FixtureVal ID="9">0,0,1,67,2,107</FixtureVal>
    <FixtureVal ID="10">0,0,1,92,2,148</FixtureVal>
    <FixtureVal ID="11">0,1,1,160,2,255</FixtureVal>
+   <FixtureVal ID="12">0,0,1,123,2,197</FixtureVal>
+   <FixtureVal ID="13">0,1,1,160,2,255</FixtureVal>
    <FixtureVal ID="2">0,255</FixtureVal>
   </Function>
   <Function ID="11" Type="Scene" Name="Under Water 2" Path="Under water">
@@ -259,6 +261,8 @@
    <FixtureVal ID="9">0,0,1,17,2,17</FixtureVal>
    <FixtureVal ID="10">0,0,1,111,2,111</FixtureVal>
    <FixtureVal ID="11">0,0,1,168,2,168</FixtureVal>
+   <FixtureVal ID="12">0,0,1,227,2,227</FixtureVal>
+   <FixtureVal ID="13">0,0,1,168,2,168</FixtureVal>
    <FixtureVal ID="2">0,255</FixtureVal>
   </Function>
   <Function ID="12" Type="Scene" Name="Under Water 3" Path="Under water">
@@ -270,6 +274,8 @@
    <FixtureVal ID="9">0,0,1,45,2,63</FixtureVal>
    <FixtureVal ID="10">0,0,1,139,2,193</FixtureVal>
    <FixtureVal ID="11">0,0,1,184,2,255</FixtureVal>
+   <FixtureVal ID="12">0,0,1,139,2,193</FixtureVal>
+   <FixtureVal ID="13">0,0,1,184,2,255</FixtureVal>
   </Function>
   <Function ID="13" Type="Chaser" Name="under water">
    <Speed FadeIn="1000" FadeOut="1" Duration="500"/>
