@@ -174,7 +174,7 @@
    <Step Number="3" FadeIn="7000" Hold="0" FadeOut="10000" Values="19">0:0,181,1,184,2,211:5:0,255:7:0,108,1,118,2,179:8:0,43,1,44,2,255:9:0,191,1,201,2,255:10:0,162,1,168,2,225:11:0,55,1,50,2,178</Step>
   </Function>
   <Function ID="2" Type="Chaser" Name="Under water loop">
-   <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
+   <Speed FadeIn="1000" FadeOut="1000" Duration="600500"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
@@ -188,7 +188,7 @@
    <Step Number="0" FadeIn="0" Hold="5000" FadeOut="0">17</Step>
   </Function>
   <Function ID="4" Type="Chaser" Name="Sunrise loop">
-   <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
+   <Speed FadeIn="1000" FadeOut="1000" Duration="600500"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
@@ -562,14 +562,14 @@
    <Step Number="5" FadeIn="0" Hold="0" FadeOut="0" Values="22">0:0,176,1,129:7:0,176,1,129:8:0,176,1,129:9:0,176,1,129:10:0,176,1,129:11:0,176,1,129:12:0,176,1,129</Step>
   </Function>
   <Function ID="45" Type="Chaser" Name="Rainbow loop">
-   <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
+   <Speed FadeIn="1000" FadeOut="1000" Duration="600500"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
    <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">31</Step>
   </Function>
   <Function ID="46" Type="Chaser" Name="Clouds loop">
-   <Speed FadeIn="500" FadeOut="500" Duration="600500"/>
+   <Speed FadeIn="1000" FadeOut="1000" Duration="600500"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
