@@ -10,7 +10,9 @@
   <InputOutputMap>
    <Universe Name="Universe 1" ID="0">
     <Input Plugin="HID" Line="0"/>
-    <Output Plugin="DMX USB" Line="0"/>
+    <Output Plugin="DMX USB" Line="0">
+     <PluginParameters UniverseChannels="24"/>
+    </Output>
    </Universe>
    <Universe Name="MIDI universe" ID="1">
     <Input Plugin="MIDI" Line="0" Profile="Generic MIDI"/>
